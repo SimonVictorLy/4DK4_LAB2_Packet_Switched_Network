@@ -1,0 +1,70 @@
+
+Random Seed = 1409654 
+Packet arrival count = 10000024 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 113.72 
+
+
+Random Seed = 6541409 
+Packet arrival count = 10000072 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 100.87 
+
+
+Random Seed = 111111 
+Packet arrival count = 10000041 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 100.11 
+
+
+Random Seed = 222222 
+Packet arrival count = 10000087 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 93.26 
+
+
+Random Seed = 333333 
+Packet arrival count = 10000124 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 91.15 
+
+
+Random Seed = 444444 
+Packet arrival count = 10000070 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 116.08 
+
+
+Random Seed = 666666 
+Packet arrival count = 10000005 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 95.68 
+
+
+Random Seed = 777777 
+Packet arrival count = 10000109 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 108.99 
+
+
+Random Seed = 121212 
+Packet arrival count = 10000103 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 94.04 
+
+
+Random Seed = 898989 
+Packet arrival count = 10000699 
+Transmitted packet count  = 10000000 
+Arrival rate = 1995.000 
+Mean Delay (msec) = 115.01 
+

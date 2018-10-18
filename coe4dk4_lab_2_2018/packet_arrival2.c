@@ -94,7 +94,7 @@ packet_arrival_event2(Simulation_Run_Ptr simulation_run, void * ptr)
   //LINK1 ARRIVAL
   schedule_packet_arrival_event2(simulation_run,
 			simulation_run_get_time(simulation_run) +
-			exponential_generator((double) 1/PACKET_ARRIVAL_RATE));
+			exponential_generator((double) 1/PACKET_ARRIVAL_RATE2));
 
 
 }

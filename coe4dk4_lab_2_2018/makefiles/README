@@ -1,4 +1,0 @@
-
-If you would like to go builds with make or cmake, copy either Makefile or
-CMakeLists.txt, respectively, to your source directory.
-

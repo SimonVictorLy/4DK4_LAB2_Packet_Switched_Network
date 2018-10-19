@@ -105,6 +105,7 @@ output_results(Simulation_Run_Ptr simulation_run)
   printf("Arrival rate = %.3f \n", (double) PACKET_ARRIVAL_RATE2);
   printf("Mean Delay (msec) = %.2f \n",
 	 1e3*data->accumulated_delay2/data->number_of_packets_processed2);
+	printf("%d",fifoqueue_size(data->buffer2));
   printf("\n");
 }
 

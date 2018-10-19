@@ -95,7 +95,11 @@ end_packet_transmission_event(Simulation_Run_Ptr simulation_run, void * link)
   output_progress_msg_to_screen(simulation_run);
 
   /* This packet is done ... give the memory back. */
-  xfree((void *) this_packet);
+  if (this_packet->source_id==1) {
+    fifoqueue_put(data->buffer2, (void*) this_packet);
+	} else if (this_packet->source_id==2) {
+    xfree((void *) this_packet);
+	}
 
   /* 
    * See if there is are packets waiting in the buffer. If so, take the next one

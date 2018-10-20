@@ -28,19 +28,19 @@
 
 /******************************************************************************/
 
-#define PACKET_ARRIVAL_RATE 473 /* packets per second */
-#define PACKET_ARRIVAL_RATE2 1 /* packets per second */
-#define PACKET_LENGTH 2000 /* bits */
+#define PACKET_ARRIVAL_RATE 10, 10, 10 /* packets per second */
+#define PACKET_LENGTH 1000 /* bits */
 #define LINK_BIT_RATE 1e6 /* bits per second */
-#define RUNLENGTH 10e4 /* packets */
+#define RUNLENGTH 1e2 /* packets */
+
+#define NUMBER_OF_SERVERS 3
 
 /* Comma separated list of random seeds to run. */
-//#define RANDOM_SEED_LIST 1409654, 6541409, 111111, 222222, 333333, 444444, 666666, 777777, 121212, 898989
-#define RANDOM_SEED_LIST 1409654, 6541409, 111111
+#define RANDOM_SEED_LIST 1410173
 
 #define PACKET_XMT_TIME ((double) PACKET_LENGTH/LINK_BIT_RATE)
 #define BLIPRATE (RUNLENGTH/1000)
-
+#define PROBABILITY 0.1
 /******************************************************************************/
 
 #endif /* simparameters.h */

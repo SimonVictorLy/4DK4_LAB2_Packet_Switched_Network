@@ -1,7 +1,7 @@
 
 /*
  * 
- * Simulation of A Single Server Queueing System
+ * Simulation_Run of A Single Server Queueing System
  * 
  * Copyright (C) 2014 Terence D. Todd Hamilton, Ontario, CANADA,
  * todd@mcmaster.ca
@@ -23,27 +23,43 @@
 
 /******************************************************************************/
 
-#ifndef _SIMPARAMETERS_H_
-#define _SIMPARAMETERS_H_
+#include "simlib.h"
+#include "main.h"
+#include "cleanup_memory.h"
 
 /******************************************************************************/
 
-#define PACKET_ARRIVAL_RATE 473 /* packets per second */
-#define PACKET_ARRIVAL_RATE2 1 /* packets per second */
-#define PACKET_LENGTH 2000 /* bits */
-#define LINK_BIT_RATE 1e6 /* bits per second */
-#define RUNLENGTH 10e4 /* packets */
+/*
+ * When a simulation_run run is finished, this function cleans up the memory
+ * that has been allocated.
+ */
 
-/* Comma separated list of random seeds to run. */
-//#define RANDOM_SEED_LIST 1409654, 6541409, 111111, 222222, 333333, 444444, 666666, 777777, 121212, 898989
-#define RANDOM_SEED_LIST 1409654, 6541409, 111111
+void
+cleanup_memory (Simulation_Run_Ptr simulation_run)
+{
+  Simulation_Run_Data_Ptr data;
+  Fifoqueue_Ptr buffer;
+  Server_Ptr link;
 
-#define PACKET_XMT_TIME ((double) PACKET_LENGTH/LINK_BIT_RATE)
-#define BLIPRATE (RUNLENGTH/1000)
+  data = (Simulation_Run_Data_Ptr)simulation_run_data(simulation_run);
 
-/******************************************************************************/
+  int i = 0;
+  for (i = 0; i < NUMBER_OF_SERVERS; i++) {
+	  buffer = data->buffer;
+	  link = data->link;
 
-#endif /* simparameters.h */
+	  if (link->state == BUSY) /* Clean out the server. */
+		  xfree(server_get(link));
+	  xfree(link);
+
+	  while (fifoqueue_size(buffer) > 0) /* Clean out the queue. */
+		  xfree(fifoqueue_get(buffer));
+	  xfree(buffer);
+	  data++;
+  }
+
+  simulation_run_free_memory(simulation_run); /* Clean up the simulation_run. */
+}
 
 
 

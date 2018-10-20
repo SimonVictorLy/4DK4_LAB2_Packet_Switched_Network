@@ -1,7 +1,7 @@
 
 /*
  * 
- * Simulation of A Single Server Queueing System
+ * Simulation_Run of A Single Server Queueing System
  * 
  * Copyright (C) 2014 Terence D. Todd Hamilton, Ontario, CANADA,
  * todd@mcmaster.ca
@@ -23,27 +23,31 @@
 
 /******************************************************************************/
 
-#ifndef _SIMPARAMETERS_H_
-#define _SIMPARAMETERS_H_
+#ifndef _PACKET_TRANSMISSION_H_
+#define _PACKET_TRANSMISSION_H_
 
 /******************************************************************************/
 
-#define PACKET_ARRIVAL_RATE 473 /* packets per second */
-#define PACKET_ARRIVAL_RATE2 1 /* packets per second */
-#define PACKET_LENGTH 2000 /* bits */
-#define LINK_BIT_RATE 1e6 /* bits per second */
-#define RUNLENGTH 10e4 /* packets */
-
-/* Comma separated list of random seeds to run. */
-//#define RANDOM_SEED_LIST 1409654, 6541409, 111111, 222222, 333333, 444444, 666666, 777777, 121212, 898989
-#define RANDOM_SEED_LIST 1409654, 6541409, 111111
-
-#define PACKET_XMT_TIME ((double) PACKET_LENGTH/LINK_BIT_RATE)
-#define BLIPRATE (RUNLENGTH/1000)
+#include "main.h"
 
 /******************************************************************************/
 
-#endif /* simparameters.h */
+/*
+ * Function prototypes
+ */
+
+void
+start_transmission_on_link(Simulation_Run_Ptr, Packet_Ptr, Server_Ptr);
+
+void
+end_packet_transmission_event(Simulation_Run_Ptr, void*);
+
+double
+get_packet_transmission_time(void);
+
+/******************************************************************************/
+
+#endif /* packet_transmission.h */
 
 
 

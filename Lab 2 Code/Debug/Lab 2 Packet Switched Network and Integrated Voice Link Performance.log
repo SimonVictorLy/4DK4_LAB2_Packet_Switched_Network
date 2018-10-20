@@ -1,0 +1,9 @@
+﻿  cleanup_memory.c
+  main.c
+  output.c
+  packet_arrival.c
+c:\users\simon_000\desktop\career\engineering fourth year\term 1\compeng 4dk4\lab 2\lab 2 code\packet_arrival.c(85): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  packet_transmission.c
+  Generating Code...
+  LINK : C:\Users\Simon_000\Desktop\Career\Engineering Fourth Year\Term 1\COMPENG 4DK4\Lab 2\Lab 2 Code\Debug\Lab 2 Packet Switched Network and Integrated Voice Link Performance.exe not found or not built by the last incremental link; performing full link
+  Lab 2 Packet Switched Network and Integrated Voice Link Performance.vcxproj -> C:\Users\Simon_000\Desktop\Career\Engineering Fourth Year\Term 1\COMPENG 4DK4\Lab 2\Lab 2 Code\Debug\Lab 2 Packet Switched Network and Integrated Voice Link Performance.exe
